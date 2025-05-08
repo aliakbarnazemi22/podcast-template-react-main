@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -49,9 +49,13 @@ function TopPodcasts() {
 
         <div className="my-8 w-full">
           <Swiper
-            modules={[Pagination]}
+            modules={[Autoplay]}
             spaceBetween={20}
-            pagination={{ clickable: true }}
+            loop={true}
+            autoplay={{
+              delay: 3000,  
+              disableOnInteraction: false, 
+            }}
             breakpoints={{
               320: {
                 slidesPerView: 1,

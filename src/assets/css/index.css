@@ -91,3 +91,7 @@ audio::-webkit-media-controls-play-button {
 .transition-custom {
    transition: 0.5s;
 }
+
+.shadow-c1 {
+  box-shadow: 0 0 25px rgba(0,0,0,.08);
+}

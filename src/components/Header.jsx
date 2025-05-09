@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 function Header() {
   // Desktop Menu
@@ -8,6 +8,10 @@ function Header() {
     setDesktopMenu((prevState) => !prevState);
   };
   // Desktop Menu
+
+  // Dropdown
+  const [dropdown, setDropdown] = useState(0);
+  // Dropdown
 
   // Sticky Header
   const [fixHeader, setFixHeader] = useState(false);
@@ -47,30 +51,90 @@ function Header() {
                 />
               </a>
               <ul className="flex justify-center items-center gap-10 text-black ff-medium text-[15px]">
-                <li>
-                  <a href="#" className="text-black font-[700] text-[15px]">
-                    Home
+                <li className="relative flex flex-col gap-2" onMouseLeave={() => setDropdown(0)}>
+                  <a className="text-black font-[600] text-[15px] cursor-default" onMouseEnter={() => setDropdown(1)}>
+                    Homes
                   </a>
+                  {dropdown === 1 ?
+                    <div className="div">
+                      <ul className="absolute bg-white w-[200px] h-auto rounded-lg px-6 py-9 flex flex-col gap-4 shadow-lg">
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Main Home
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Fullscreen Slider
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Landing
+                          </a>
+                        </li>
+                      </ul>
+                    </div> : <div></div>}
                 </li>
-                <li>
-                  <a href="#" className="text-black font-[700] text-[15px]">
+                <li className="relative flex flex-col gap-2" onMouseLeave={() => setDropdown(0)}>
+                  <a className="text-black font-[600] text-[15px] cursor-default" onMouseEnter={() => setDropdown(2)}>
                     Pages
                   </a>
+                  {dropdown === 2 ?
+                    <div className="div">
+                      <ul className="absolute bg-white w-[200px] h-auto rounded-lg px-6 py-9 flex flex-col gap-4 shadow-lg">
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            About Us
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Meet Your Hosts
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Press Releases
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Contact Us
+                          </a>
+                        </li>
+                      </ul>
+                    </div> : <div></div>}
                 </li>
-                <li>
-                  <a href="#" className="text-black font-[700] text-[15px]">
+                <li className="relative flex flex-col gap-2" onMouseLeave={() => setDropdown(0)}>
+                  <a className="text-black font-[600] text-[15px] cursor-default" onMouseEnter={() => setDropdown(3)}>
                     Podcast
                   </a>
-                </li>
-                <li>
-                  <a href="#" className="text-black font-[700] text-[15px]">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-black font-[700] text-[15px]">
-                    Shop
-                  </a>
+                  {dropdown === 3 ?
+                    <div className="div">
+                      <ul className="absolute bg-white w-[200px] h-auto rounded-lg px-6 py-9 flex flex-col gap-4 shadow-lg">
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            About Us
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Meet Your Hosts
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Press Releases
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Contact Us
+                          </a>
+                        </li>
+                      </ul>
+                    </div> : <div></div>}
                 </li>
               </ul>
               <ul className="flex gap-5 items-center text-black ff-medium">
@@ -193,32 +257,92 @@ function Header() {
             />
           </a>
           <ul className="flex justify-center items-center gap-10 text-black ff-medium text-[15px]">
-            <li>
-              <a href="#" className="text-black font-[700] text-[15px]">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-black font-[700] text-[15px]">
-                Pages
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-black font-[700] text-[15px]">
-                Podcast
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-black font-[700] text-[15px]">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-black font-[700] text-[15px]">
-                Shop
-              </a>
-            </li>
-          </ul>
+                <li className="relative flex flex-col gap-2" onMouseLeave={() => setDropdown(0)}>
+                  <a className="text-black font-[600] text-[15px] cursor-default" onMouseEnter={() => setDropdown(1)}>
+                    Homes
+                  </a>
+                  {dropdown === 1 ?
+                    <div className="div">
+                      <ul className="absolute bg-white w-[200px] h-auto rounded-lg px-6 py-9 flex flex-col gap-4 shadow-lg">
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Main Home
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Fullscreen Slider
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Landing
+                          </a>
+                        </li>
+                      </ul>
+                    </div> : <div></div>}
+                </li>
+                <li className="relative flex flex-col gap-2" onMouseLeave={() => setDropdown(0)}>
+                  <a className="text-black font-[600] text-[15px] cursor-default" onMouseEnter={() => setDropdown(2)}>
+                    Pages
+                  </a>
+                  {dropdown === 2 ?
+                    <div className="div">
+                      <ul className="absolute bg-white w-[200px] h-auto rounded-lg px-6 py-9 flex flex-col gap-4 shadow-lg">
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            About Us
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Meet Your Hosts
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Press Releases
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Contact Us
+                          </a>
+                        </li>
+                      </ul>
+                    </div> : <div></div>}
+                </li>
+                <li className="relative flex flex-col gap-2" onMouseLeave={() => setDropdown(0)}>
+                  <a className="text-black font-[600] text-[15px] cursor-default" onMouseEnter={() => setDropdown(3)}>
+                    Podcast
+                  </a>
+                  {dropdown === 3 ?
+                    <div className="div">
+                      <ul className="absolute bg-white w-[200px] h-auto rounded-lg px-6 py-9 flex flex-col gap-4 shadow-lg">
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            About Us
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Meet Your Hosts
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Press Releases
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-black font-[400] text-[15px]">
+                            Contact Us
+                          </a>
+                        </li>
+                      </ul>
+                    </div> : <div></div>}
+                </li>
+              </ul>
           <ul className="flex gap-5 items-center text-black ff-medium">
             <li>
               <span className="cursor-pointer">

@@ -8,36 +8,46 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/Regular.ttf");
+  font-family: "Lato";
+  src: url("/public/fonts/Lato/Lato-Thin.ttf") format("truetype");
+  font-weight: 200;
 }
 
 @font-face {
-  font-family: "OpenSans-Medium";
-  src: url("../fonts/Medium.ttf");
+  font-family: "Lato";
+  src: url("/public/fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
 }
 
 @font-face {
-  font-family: "OpenSans-Bold";
-  src: url("../fonts/Bold.ttf");
+  font-family: "Lato";
+  src: url("/public/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: "OpenSans-Light";
-  src: url("../fonts/Light.ttf");
+  font-family: "Lato";
+  src: url("/public/fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
 }
+
+@font-face {
+  font-family: "Lato";
+  src: url("/public/fonts/Lato/Lato-Black.ttf") format("truetype");
+  font-weight: 800;
+}
+
+
 
 body {
-  font-family: "Open Sans";
+  font-family: "Lato", sans-serif;
   min-height: 200vh;
   position: relative;
   overflow-x: hidden;
 }
 
-.ff-light {
+/* .ff-light {
   font-family: "OpenSans-Light";
 }
 
@@ -47,7 +57,7 @@ body {
 
 .ff-medium {
   font-family: "OpenSans-Medium";
-}
+} */
 
 .rounded-img-content-2 {
   border-radius: 12px 0 0 12px;
@@ -60,7 +70,7 @@ body {
 }
 
 .font-lato {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato" !important;
 }
 
 .hero-section-audio-player {

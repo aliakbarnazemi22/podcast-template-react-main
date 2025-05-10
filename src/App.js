@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection'
 import DownHeroSection from './components/DownHeroSection'
 import TopPodcasts from './components/TopPodcasts'
 import EssentionalEpisodes from './components/EssentionalEpisodes'
+import Video from './components/Video'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <DownHeroSection />
       <TopPodcasts />
       <EssentionalEpisodes />
+      <Video />
     </main>
   )
 }

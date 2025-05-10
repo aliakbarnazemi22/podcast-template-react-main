@@ -27,6 +27,7 @@ function EssentionalEpisodes() {
                     </svg>
                 </a>
             </div>
+            
             <div className="flex justify-between flex-wrap mt-8 gap-0">
                 <div className='w-full md:w-1/2 lg:w-[33.3%] p-6'>
                     <div className="w-full bg-white shadow-c1 rounded-xl">

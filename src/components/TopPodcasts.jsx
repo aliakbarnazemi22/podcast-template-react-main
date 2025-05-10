@@ -69,8 +69,8 @@ function TopPodcasts() {
             }}
           >
             {cards.map((card) => (
-              <SwiperSlide key={card.id} className="!flex !justify-center">
-                <div className="bg-white shadow-md rounded-xl flex md:flex-row flex-col items-center justify-between !w-[95%] xl:!w-[55%]">
+              <SwiperSlide key={card.id} className="!flex !justify-center py-4">
+                <div className="bg-white shadow-c1 rounded-xl flex md:flex-row flex-col items-center justify-between !w-[95%] xl:!w-[55%]">
                   <div
                     className="rounded-tl-xl rounded-tr-xl md:rounded-tr-none md:rounded-bl-xl h-[400px] object-cover w-full md:w-[50%] bg-cover transition scale-100 md:hover:scale-[1.03] md:hover:rounded-tl-xl relative md:hover:rounded-bl-xl cursor-pointer"
                     style={{ backgroundImage: `url(${card.imgUrl})` }}
